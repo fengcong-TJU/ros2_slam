@@ -34,4 +34,4 @@
 # 编译后的文件
 build/
 install/
-logs/
+log/
