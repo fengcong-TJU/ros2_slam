@@ -33,3 +33,13 @@ make -j8
 sudo make install
 sudo ldconfig
 
+pangolin： MIT license
+在终端输入：
+$ git clone https://github.com/stevenlovegrove/Pangolin.git
+$ cd Pangolin
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j16
+$ sudo make install 
+$ sudo ldconfig
