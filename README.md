@@ -55,11 +55,13 @@ $ make
 $ sudo make install
 $ sudo ldconfig
 
-安装Sophus库
-git clone https://github.com/strasdat/Sophus.git 或者下载最新的release源代码
-cd Sophus
-mkdir build
-cd build
-cmake ..
-sudo make install
-ldconfig
+Sophus:https://github.com/strasdat/Sophus/blob/main-1.x/LICENSE.txt
+在终端输入
+$ git clone https://github.com/strasdat/Sophus.git 或者下载最新的release源代码
+$ cd Sophus
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j16
+$ sudo make install
+$ ldconfig
