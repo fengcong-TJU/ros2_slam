@@ -2,10 +2,18 @@
 基于ros2操作系统搭建的slam工程
 
 配置环境
+一键安装ros2 humble：
+$ wget http://fishros.com/install -O fishros && . fishros
 
 eigen：Mozilla Public License Version 2.0 http://mozilla.org/MPL/2.0/
-终端输入
-$ sudo apt-get install libeigen3-dev
+官网下载最新安装包：http://eigen.tuxfamily.org/index.php?title=Main_Page
+终端输入(卸载老版本eigen)
+$ sudo rm -rf /usr/include/eigen3 /usr/lib/cmake/eigen3 /usr/share/doc/libeigen3-dev /usr/share/pkgconfig/eigen3.pc /var/lib/dpkg/info/libeigen3-dev.list /var/lib/dpkg/info/libeigen3-dev.md5sums  
+安装
+$ mkdir build
+$ cd build
+$ cmake ..
+$ sudo make install
 
 gtsam：BSD-licensed https://www.linfo.org/bsdlicense.html
 gtsam官网及官方文档：https://gtsam.org
@@ -64,7 +72,14 @@ $ cd build
 $ cmake ..
 $ make -j16
 $ sudo make install
-$ ldconfig
+$ sudo ldconfig
 
-g20
-$ git clone https://github.com/RainerKuemmerle/g2o.git
+g2o:g2o is licensed under the BSD License. However, some libraries are available under different license terms. 
+$ git clone https://github.com/RainerKuemmerle/g2o.git 或者下载最新的release源代码
+$ cd g2o
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j16
+$ sudo make install
+$ sudo ldconfig
