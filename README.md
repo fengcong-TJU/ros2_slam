@@ -90,8 +90,20 @@ $ sudo make install
 $ sudo ldconfig
 
 g2o:g2o is licensed under the BSD License. However, some libraries are available under different license terms. 
-$ git clone https://github.com/RainerKuemmerle/g2o.git 或者下载最新的release源代码
+$ git clone https://github.com/RainerKuemmerle/g2o.git 或者下载最新的release源代码(为了兼容性，使用20230223版本)
 $ cd g2o
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j16
+$ sudo make install
+$ sudo ldconfig
+
+ceres: Apache License Version 2.0 https://github.com/ceres-solver/ceres-solver/blob/master/LICENSE
+在终端输入
+$ sudo apt-get install  liblapack-dev libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev
+$ git clone https://github.com/ceres-solver/ceres-solver.git
+$ cd ceres-solver
 $ mkdir build
 $ cd build
 $ cmake ..
