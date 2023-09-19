@@ -55,6 +55,9 @@ $ sudo ldconfig
 fmt:https://github.com/fmtlib/fmt/blob/master/LICENSE
 在终端输入
 $ git clone https://github.com/fmtlib/fmt.git 或者下载最新的release源代码（为了保持兼容性，本案例使用fmt-9.1.0）
+在CMakeists.txt中添加编译选项
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+在终端输入
 $ cd fmt
 $ mkdir build
 $ cd build
@@ -67,6 +70,18 @@ Sophus:https://github.com/strasdat/Sophus/blob/main-1.x/LICENSE.txt
 在终端输入
 $ git clone https://github.com/strasdat/Sophus.git 或者下载最新的release源代码
 $ cd Sophus
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j16
+$ sudo make install
+$ sudo ldconfig
+
+spdlog:MIT License https://github.com/gabime/spdlog/blob/v1.x/LICENSE
+$ git clone https://github.com/gabime/spdlog.git 或者下载最新的release源代码
+在CMakeists.txt中添加编译选项
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+$ cd spdlog
 $ mkdir build
 $ cd build
 $ cmake ..
