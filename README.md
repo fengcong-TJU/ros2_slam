@@ -12,7 +12,7 @@ $ sudo rm -rf /usr/include/eigen3 /usr/lib/cmake/eigen3 /usr/share/doc/libeigen3
 安装
 $ mkdir build
 $ cd build
-$ cmake ..
+$ cmake . -DCMAKE_INSTALL_PREFIX=/usr ..
 $ sudo make install
 
 gtsam：BSD-licensed https://www.linfo.org/bsdlicense.html
@@ -110,3 +110,7 @@ $ cmake ..
 $ make -j16
 $ sudo make install
 $ sudo ldconfig
+
+
+sudo apt-get install libpcap-dev
+https://blog.csdn.net/qq_35097289/article/details/130690974
