@@ -125,8 +125,7 @@ $ sudo make install
 
 Livox ROS Driver 2：MIT License https://github.com/Livox-SDK/livox_ros_driver2/blob/master/LICENSE.txt
 在终端输入
-$ cd ros2_slam/src
-$ git clone https://github.com/Livox-SDK/livox_ros_driver2.git livox_ros_driver2
+$ git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
 $ source /opt/ros/humble/setup.sh
 cd 到功能包源代码目录中
 $ ./build.sh humble
