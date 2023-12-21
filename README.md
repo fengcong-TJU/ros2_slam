@@ -111,6 +111,24 @@ $ make -j16
 $ sudo make install
 $ sudo ldconfig
 
-
 sudo apt-get install libpcap-dev
 https://blog.csdn.net/qq_35097289/article/details/130690974
+
+Livox SDK2:MIT License https://github.com/Livox-SDK/Livox-SDK2/blob/master/LICENSE.txt
+在终端输入
+$ git clone https://github.com/Livox-SDK/Livox-SDK2.git
+$ cd ./Livox-SDK2/
+$ mkdir build
+$ cd build
+$ cmake .. && make -j
+$ sudo make install
+
+Livox ROS Driver 2：MIT License https://github.com/Livox-SDK/livox_ros_driver2/blob/master/LICENSE.txt
+在终端输入
+$ cd ros2_slam/src
+$ git clone https://github.com/Livox-SDK/livox_ros_driver2.git livox_ros_driver2
+$ source /opt/ros/humble/setup.sh
+cd 到功能包源代码目录中
+$ ./build.sh humble
+$ source ../../install/setup.sh
+$ ros2 launch livox_ros_driver2 rviz_HAP_launch.py
